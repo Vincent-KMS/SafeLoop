@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Order Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .menu-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 200px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .menu-item:hover {
+      transform: scale(1.05);
+    }
+    .menu-item img {
+      width: 100%;
+      height: auto;
+    }
+    .menu-item h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+    .menu-item p {
+      margin: 0 0 10px;
+      color: #555;
+    }
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    form h2 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    form select, form input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    form input[type="submit"] {
+      background: #28a745;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    form input[type="submit"]:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>餐點目錄</h1>
+</header>
+
+<div class="menu-container">
+  <!-- Menu Item 1 -->
+  <div class="menu-item">
+    <img src="燒肉飯.jpg" alt="燒肉飯">
+    <h3>燒肉飯</h3>
+    <p>$10</p>
+  </div>
+  <!-- Menu Item 2 -->
+  <div class="menu-item">
+    <img src="雞腿飯.jpg" alt="雞腿飯">
+    <h3>雞腿飯</h3>
+    <p>$12</p>
+  </div>
+  <!-- Menu Item 3 -->
+  <div class="menu-item">
+    <img src="爌肉飯.jpg" alt="爌肉飯">
+    <h3>爌肉飯</h3>
+    <p>$8</p>
+  </div>
+</div>
+
+<!-- Order Form -->
+<form action="/submit-order" method="POST">
+  <h2>現在就訂購</h2>
+  <label for="dish">選擇餐點</label>
+  <select id="dish" name="dish">
+    <option value="Vegetarian Pasta">燒肉飯 - $90</option>
+    <option value="Grilled Chicken">雞腿飯 - $100</option>
+    <option value="Vegan Salad">爌肉飯 - $80</option>
+  </select>
+  
+  <label for="quantity">數量</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+  
+  <input type="submit" value="Submit Order">
+</form>
+
+</body>
+</html>

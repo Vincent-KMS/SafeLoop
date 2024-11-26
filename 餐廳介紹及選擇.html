@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Directory</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+    .restaurant {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      display: flex;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .restaurant img {
+      width: 200px;
+      height: auto;
+    }
+    .restaurant-content {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .restaurant-content h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .restaurant-content p {
+      margin: 10px 0;
+      color: #555;
+    }
+    .restaurant-content .address {
+      font-style: italic;
+      color: #666;
+    }
+    .restaurant-content a {
+      color: #007bff;
+      text-decoration: none;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .restaurant-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>餐廳目錄</h1>
+</header>
+
+<div class="container">
+
+  <!-- Restaurant 1 -->
+  <div class="restaurant">
+    <img src="甲味燒肉飯.jpeg" alt="甲味燒肉飯">
+    <div class="restaurant-content">
+      <h3>甲味燒肉飯</h3>
+      <p>Known for its exquisite Italian cuisine and cozy ambiance. A must-visit for pasta lovers.</p>
+      <p class="address">123 Main Street, Cityville</p>
+      <a href="曱味燒肉點餐選擇.html">選擇菜單</a>
+    </div>
+  </div>
+
+  <!-- Restaurant 2 -->
+  <div class="restaurant">
+    <img src="李港味.jpg" alt="李港味港式燒臘">
+    <div class="restaurant-content">
+      <h3>李港味港式燒臘</h3>
+      <p>A trendy spot offering fusion dishes that blend Asian and Western flavors.</p>
+      <p class="address">456 Market Avenue, Townsville</p>
+      <a href="#">選擇菜單</a>
+    </div>
+  </div>
+
+  <!-- Restaurant 3 -->
+  <div class="restaurant">
+    <img src="來來豆漿.jpg" alt="來來豆漿">
+    <div class="restaurant-content">
+      <h3>來來豆漿</h3>
+      <p>A charming café with a focus on organic and farm-to-table ingredients.</p>
+      <p class="address">789 High Street, Villagetown</p>
+      <a href="#">選擇菜單</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
