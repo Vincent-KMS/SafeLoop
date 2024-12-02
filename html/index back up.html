@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Welcome Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .welcome-section {
+      background-color: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+    .welcome-section h2 {
+      color: #333;
+    }
+    .stats {
+      margin: 20px 0;
+    }
+    .stats div {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #555;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    .buttons a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      background-color: #007bff;
+      transition: background-color 0.3s ease;
+    }
+    .buttons a:hover {
+      background-color: #0056b3;
+    }
+    .buttons a.return-box {
+      background-color: #28a745;
+    }
+    .buttons a.return-box:hover {
+      background-color: #218838;
+    }
+    .buttons a.manage-orders {
+      background-color: #ffc107;
+    }
+    .buttons a.manage-orders:hover {
+      background-color: #e0a800;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Eco-Friendly Dining</h1>
+</header>
+
+<div class="welcome-section">
+  <h2>Hello, [Customer Name]!</h2>
+  <p>Thank you for choosing sustainable dining.</p>
+
+  <div class="stats">
+    <div><strong>Times used reusable boxes:</strong> 12</div>
+    <div><strong>Carbon saved:</strong> 5.4 kg</div>
+  </div>
+
+  <div class="buttons">
+    <a href="/order" class="order-food">Order Food</a>
+    <a href="/return-box" class="return-box">Return Reusable Box</a>
+    <a href="/manage-orders" class="manage-orders">Manage Orders</a>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Directory</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    /* Header: Fixed with Logo and Hamburger Menu */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    header .hamburger {
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+    header .logo img {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    /* Left Side Menu */
+    nav {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      height: 100%;
+      width: 250px;
+      background-color: #333;
+      color: #fff;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+      overflow-y: auto;
+      transition: left 0.3s ease;
+      z-index: 999;
+    }
+    nav ul {
+      list-style: none;
+      padding: 60px 20px 20px; /* Leave space below header */
+      margin: 0;
+    }
+    nav ul li {
+      margin: 15px 0;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .nav-open {
+      left: 0;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: 80px auto 20px; /* Add top margin to account for fixed header */
+      padding: 10px;
+    }
+    .restaurant {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      display: flex;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .restaurant img {
+      width: 200px;
+      height: auto;
+    }
+    .restaurant-content {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .restaurant-content h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .restaurant-content p {
+      margin: 10px 0;
+      color: #555;
+    }
+    .restaurant-content .address {
+      font-style: italic;
+      color: #666;
+    }
+    .restaurant-content a {
+      color: #007bff;
+      text-decoration: none;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .restaurant-content a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul li a {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="logo">
+    <a href="index.html"><img src="SafeLoop安心循環4.png" alt="Restaurant Directory Logo"></a>
+  </div>
+</header>
+
+<nav id="sideMenu">
+  <ul>
+    <li><a href="#">首頁</a></li>
+    <li><a href="#">關於我們</a></li>
+    <li><a href="#">聯絡方式</a></li>
+    <li><a href="#">熱門餐廳</a></li>
+    <li><a href="#">最新推薦</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+
+  <!-- Restaurant 1 -->
+  <div class="restaurant">
+    <img src="甲味燒肉飯.jpeg" alt="甲味燒肉飯">
+    <div class="restaurant-content">
+      <h3>甲味燒肉飯</h3>
+      <p>提供美味的燒肉飯，深受當地人喜愛。</p>
+      <p class="address">123 Main Street, Cityville</p>
+      <a href="甲味燒肉飯點餐.html">選擇菜單</a>
+    </div>
+  </div>
+
+  <!-- Restaurant 2 -->
+  <div class="restaurant">
+    <img src="李港味.jpg" alt="李港味港式燒臘">
+    <div class="restaurant-content">
+      <h3>李港味港式燒臘</h3>
+      <p>提供正宗港式燒臘，帶來地道風味。</p>
+      <p class="address">456 Market Avenue, Townsville</p>
+      <a href="李港味點餐.html">選擇菜單</a>
+    </div>
+  </div>
+
+  <!-- Restaurant 3 -->
+  <div class="restaurant">
+    <img src="來來豆漿.jpg" alt="來來豆漿">
+    <div class="restaurant-content">
+      <h3>來來豆漿</h3>
+      <p>豆漿搭配燒餅油條，完美的早餐選擇。</p>
+      <p class="address">789 High Street, Villagetown</p>
+      <a href="來來豆漿點餐.html">選擇菜單</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Toggle side menu
+  function toggleMenu() {
+    const sideMenu = document.getElementById('sideMenu');
+    if (sideMenu.classList.contains('nav-open')) {
+      sideMenu.classList.remove('nav-open');
+    } else {
+      sideMenu.classList.add('nav-open');
+    }
+  }
+</script>
+
+</body>
+</html>
+
+
